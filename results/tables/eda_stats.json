@@ -1,0 +1,55 @@
+{
+  "n_adult": 48842,
+  "n_bank": 45211,
+  "adult_positive_rate": 0.23928176569346055,
+  "bank_positive_rate": 0.11698480458295547,
+  "adult_missing": {
+    "workclass": 2799,
+    "occupation": 2809,
+    "native_country": 857
+  },
+  "top_mi_adult": [
+    {
+      "feature": "relationship",
+      "mi": 0.114662611504088
+    },
+    {
+      "feature": "marital_status",
+      "mi": 0.10882569452497023
+    },
+    {
+      "feature": "capital_gain",
+      "mi": 0.08356366867713771
+    },
+    {
+      "feature": "age",
+      "mi": 0.06734948070099867
+    },
+    {
+      "feature": "education",
+      "mi": 0.0638192601855597
+    }
+  ],
+  "top_mi_bank": [
+    {
+      "feature": "poutcome",
+      "mi": 0.029397241496458754
+    },
+    {
+      "feature": "month",
+      "mi": 0.02435116566070715
+    },
+    {
+      "feature": "pdays",
+      "mi": 0.024162577835489474
+    },
+    {
+      "feature": "balance",
+      "mi": 0.01759226201620212
+    },
+    {
+      "feature": "contact",
+      "mi": 0.013626837798515465
+    }
+  ]
+}

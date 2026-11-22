@@ -1,0 +1,29 @@
+# Data (downloaded by scripts/download_data.py)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+
+# Large experiment artifacts
+results/runs/*/model.pt
+results/runs/*/samples_*.csv
+results/runs/*/samples_*.npz
+results/generation.log
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local secrets
+tools/*.json
+tools/*.ps1

@@ -1,0 +1,3 @@
+dataset,n,n_features,n_numeric,n_categorical,positive_rate,n_positive,missing_cells,missing_pct
+adult,48842,12,5,7,0.23928176569346055,11687,6465,0.8824372466319971
+bank,45211,15,5,10,0.11698480458295547,5289,0,0.0
