@@ -27,3 +27,8 @@ Thumbs.db
 # Local secrets
 tools/*.json
 tools/*.ps1
+
+# Scratch / previews
+report/preview*/
+report/min_test.docx
+report/docx_check.json

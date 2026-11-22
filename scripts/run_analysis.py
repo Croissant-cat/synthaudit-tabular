@@ -280,7 +280,7 @@ def plot_tstr(df: pd.DataFrame, util: pd.DataFrame):
         ax.bar(["VAE", "GAN", "DDPM"], means, yerr=stds, capsize=3,
                color=[MODEL_COLORS[m] for m in ["vae", "gan", "ddpm"]], width=0.55)
         ax.axhline(base[clf], color="k", ls="--", lw=1.0, label="real minority only")
-        ax.set_ylim(0.75, 0.95)
+        ax.set_ylim(min(0.70, min(means) - 0.03), 0.95)
         ax.set_ylabel("ROC-AUC")
         ax.set_title("TSTR · HistGradientBoosting" if clf == "hgb" else "TSTR · Logistic regression")
         ax.legend(frameon=False, fontsize=8)
@@ -388,7 +388,8 @@ def diffusion_steps(tag="adult_r05", seed=0):
     ax2 = ax1.twinx()
     ax2.plot(out.steps, out.mmd, marker="^", label="MMD", color=C2)
     ax2.set_ylabel("MMD")
-    ax1.legend(frameon=False, fontsize=8, loc="upper right")
+    lines = ax1.get_lines() + ax2.get_lines()
+    ax1.legend(lines, ["KS", "TV", "MMD"], frameon=False, fontsize=8, loc="lower left")
     ax1.set_title("DDPM sample quality vs. sampling steps")
     fig.tight_layout()
     fig.savefig(FIG_DIR / "fig16_diffusion_steps.png", bbox_inches="tight")
