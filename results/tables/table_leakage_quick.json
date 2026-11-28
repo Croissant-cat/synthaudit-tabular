@@ -1,0 +1,79 @@
+{
+  "note": "quick DDPM controlled check, 1x dose only; full table pending",
+  "rows": [
+    {
+      "budget": 0.1,
+      "seed": 0,
+      "none": 0.8658,
+      "aug": 0.8587,
+      "delta": -0.0071
+    },
+    {
+      "budget": 0.1,
+      "seed": 1,
+      "none": 0.866,
+      "aug": 0.8702,
+      "delta": 0.0042
+    },
+    {
+      "budget": 0.1,
+      "seed": 2,
+      "none": 0.8667,
+      "aug": 0.8425,
+      "delta": -0.0242
+    },
+    {
+      "budget": 0.1,
+      "seed": 3,
+      "none": 0.8411,
+      "aug": 0.8323,
+      "delta": -0.0088
+    },
+    {
+      "budget": 0.1,
+      "seed": 4,
+      "none": 0.8676,
+      "aug": 0.8648,
+      "delta": -0.0028
+    },
+    {
+      "budget": 0.25,
+      "seed": 0,
+      "none": 0.8814,
+      "aug": 0.8721,
+      "delta": -0.0093
+    },
+    {
+      "budget": 0.25,
+      "seed": 1,
+      "none": 0.8852,
+      "aug": 0.888,
+      "delta": 0.0028
+    },
+    {
+      "budget": 0.25,
+      "seed": 2,
+      "none": 0.8844,
+      "aug": 0.8797,
+      "delta": -0.0047
+    },
+    {
+      "budget": 0.25,
+      "seed": 3,
+      "none": 0.8818,
+      "aug": 0.8653,
+      "delta": -0.0165
+    },
+    {
+      "budget": 0.25,
+      "seed": 4,
+      "none": 0.8925,
+      "aug": 0.8871,
+      "delta": -0.0054
+    }
+  ],
+  "mean_delta": {
+    "0.1": -0.0077,
+    "0.25": -0.0066
+  }
+}

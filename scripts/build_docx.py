@@ -127,7 +127,7 @@ def add_title_page(doc: Document, title: str, subtitle: str):
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     run = p.add_run(title)
-    set_run_font(run, size=22, bold=True, cn=HEAD_FONT_CN)
+    set_run_font(run, size=19.5, bold=True, cn=HEAD_FONT_CN)
 
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -139,7 +139,7 @@ def add_title_page(doc: Document, title: str, subtitle: str):
         doc.add_paragraph()
     for line in [
         "课程：机器学习 / 数据分析项目",
-        "题目：生成式表格数据增强的效用审计",
+        "题目：生成式表格数据增强的标签泄漏审计",
         "代码：https://github.com/Croissant-cat/synthaudit-tabular",
         "日期：2026-11-22",
     ]:
@@ -167,6 +167,10 @@ def add_table(doc: Document, rows: list[list[str]]):
     table = doc.add_table(rows=1, cols=n_cols)
     table.style = "Table Grid"
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
+    trPr = table.rows[0]._tr.get_or_add_trPr()
+    tblHeader = OxmlElement("w:tblHeader")
+    tblHeader.set(qn("w:val"), "true")
+    trPr.append(tblHeader)
     hdr = table.rows[0].cells
     for j, val in enumerate(rows[0]):
         hdr[j].text = ""
